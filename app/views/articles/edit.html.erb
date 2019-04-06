@@ -1,0 +1,8 @@
+<%= form_for(@article) do |f| %>
+    <%# <%= render 'shared/error_messages', object: f.object %> 
+    <h3>タイトル</h3>
+    <%= f.text_field :title %>
+    <h3>記事内容</h3>
+    <%= f.text_area :content %>
+    <%= f.submit "Update Article", class: "btn btn-primary" %>
+<% end %>

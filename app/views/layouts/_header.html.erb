@@ -1,0 +1,18 @@
+<header>
+    <p id="logo">
+    <%= link_to "RailsCampBlog", root_path %>
+    </p>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "top", root_path %></li>
+        <% if user_signed_in? %>
+            <li><%= link_to "新規投稿", new_article_path %></li>
+            <li><%= link_to "ログアウト", logout_path %></li>
+        <% else %>
+            <li><%= link_to "新規登録", signup_path %></li>
+            <li><%= link_to "ログイン", login_path %></li>
+        <% end %>
+      </ul>
+    </nav>
+  <div class="clear"></div>
+</header>

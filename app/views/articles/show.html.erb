@@ -1,0 +1,20 @@
+<% provide(:title, @article.title) %>
+<% provide(:content, @article.content) %>
+<% provide(:time, @article.created_at) %>
+<% provide(:name, @user.email) %>
+<div id="title">
+<p>
+<%= yield(:time)%>
+書いた人：
+<%= yield(:name)%>
+</p>
+<h1>
+<%= yield(:title)%>
+</h1>
+</div>
+<div id="article_wrap">
+    <div id="content">
+    <%= yield(:content) %>
+    </div>
+    <div class="clear"></div>
+</div>
